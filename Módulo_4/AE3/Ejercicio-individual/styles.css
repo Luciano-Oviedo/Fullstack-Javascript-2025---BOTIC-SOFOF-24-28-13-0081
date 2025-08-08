@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+}
+
+header {
+    min-height: fit-content;
+    max-height: 15%;
+    color: #ffffff;
+    background-color: #3f3f3f;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    max-height: 85%;
+    margin: 2em;
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.mi-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+    width: 30%;
+    max-width: 300px;
+    border: solid thin;
+    border-radius: 10px;
+    padding: 1em;
+    min-width: fit-content;
+    min-height: fit-content;
+    align-items: center;
+}
+
+#marco-perfil {
+    border: solid transparent;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+}
+
+.mi-perfil img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mi-perfil button {
+    color: #ffffff;
+    background-color: #2b9dc0;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 65%;
+    cursor: pointer;
+}
+
+.publicacion {
+    border: solid black thin;
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.5em;
+    background-color: #f4f4f4;
+    margin-block: 1em;
+    max-width: 400px;
+}
+
+.likes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.likes span {
+    font-weight: bold;
+}
+
+.likes button {
+    width: 15%;
+    padding-block: 0.2em;
+    min-width: 40px;
+    border-radius: 6px;
+    border: transparent;
+    background-color: #ffd06b;
+    justify-self: flex-end;
+    margin-left: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
