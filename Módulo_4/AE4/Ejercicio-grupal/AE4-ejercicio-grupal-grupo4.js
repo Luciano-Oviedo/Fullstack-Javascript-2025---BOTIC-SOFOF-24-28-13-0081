@@ -138,9 +138,20 @@ const realizarPedidoAsync = async () => {
 // Función bonus de pedido con Promise.allSettled
 
 const realizarPedidoBonus = () => {
-  const preparaciones = [prepararCafe(), tostarPan(), exprimirJugo()];
+  const preparaciones = [prepararCafe(), tostarPan(), exprimirJugo()]; // Reúne promesas de preparaciones en un array
 
   Promise.allSettled(preparaciones).then((resultados) => {
-    console.log(resultados);
+    // el método all Settled itera sobre ese array de promesas y devuelve un objeto con los resultados de cada promesa, sin importar si se cumplen o no, y sin cortar el flujo en caso de fallo
+
+    const nombres = ["Café", "Pan", "Jugo"];
+
+    resultados.forEach((resultado, i) => {
+      // Dentro del.then, formateamos un poco para dar legibilidad al resultado. Por cada promesa "fulfilled" se imprime un mensaje de "listo" y el tiempo de preparación. Por cada promesa "rejected" se imprime un mensaje de "fallo" y la razón del error
+      if (resultado.status === "fulfilled") {
+        console.log(`✅ ${nombres[i]} listo: ${resultado.value}`);
+      } else {
+        console.log(`❌ ${nombres[i]} falló: ${resultado.reason}`);
+      }
+    });
   });
 };
