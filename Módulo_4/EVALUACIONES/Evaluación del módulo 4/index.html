@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Módulo</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./gestionTareas.js" defer></script>
+</head>
+
+<body>
+    <h1>Tu lista de tareas</h1>
+    <div class="formulario">
+        <label for="titulo">Título</label>
+        <input type="text" name="campo titulo" id="titulo">
+        <label for="descripcion">Descripción</label>
+        <textarea name="campo descripcion" id="descripcion"></textarea>
+        <button id="botonAgregarTarea">Agregar tarea</button>
+    </div>
+    <div class="listasTareas">
+        <ul class="contenedorTareas">
+            <h2>Tareas pendientes</h2>
+        </ul>
+        <ul class="tareasCompletas">
+            <h2>Tareas completas</h2>
+        </ul>
+    </div>
+</body>
+
+</html>
