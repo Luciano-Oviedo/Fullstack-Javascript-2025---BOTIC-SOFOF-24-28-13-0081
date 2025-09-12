@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  text-align: center;
+  justify-content: center;
+  margin: 2em;
+}
+
+.formulario label,
+input,
+button {
+  width: 70%;
+  margin-block: 0.5em;
+  display: block;
+  margin-inline: auto;
+}
+
+.img-container {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
+.tu-pokemon {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
