@@ -1,0 +1,67 @@
+Responde brevemente cada una de las siguientes preguntas en un documento de texto o cuaderno:
+
+¿Qué es Node.js y para qué sirve?
+
+Node.js es un entorno de ejecución de Javascript desde el lado del servidor, que ejecuta código usando el motor de JS V8, desarrollado por Google. Como Node.js se ejecuta desde el servidor, nos permite programar aplicaciones web completas (backend y frontend) en un solo lenguaje de programación: Javascript. 
+
+¿Qué es el motor V8 de Google?
+
+Es un motor de código abierto desarrollado por Google y escrito en C++, su función es compilar código Javascript y WebAssembly a código máquina. Es el motor que usa Node.js y los navegadores basados en Chromium (y posteriormente Microsoft Edge, Brave y Opera). V8 realiza la compilación en tiempo de ejecución, lo que se conoce como JIT (Just In Time), por lo que es un muy motor rápido y eficiente. Como compilador de JS, permite ejecutar Javascript fuera del entorno del navegador (es el caso de Node.js), lo que abrió nuevos horizontes para el desarrollo en este lenguaje.
+
+¿Por qué Node.js es considerado no bloqueante (non-blocking)?
+
+Porque Node no bloquea la ejecución de código para esperar que se completen tareas, sino que funciona con un modelo de ejecución asíncrona, pasando las tareas pendientes a funciones callback que se ejecutarán cuando se completen ciertas operaciones, permitiendo la ejecución de otras tareas en este intertanto.
+
+¿Qué significa que Node usa un solo hilo de ejecución (single-threaded)?
+
+Significa que ejecuta código en un solo hilo, secuencialmente. Sin embargo, como explicamos antes, Node evita el bloqueo de este hilo único de ejecución mediante el uso de peticiones asíncronas y funciones callback, manejadas por lo que se conoce como bucle de eventos (Event Loop).
+
+¿Qué tipo de aplicaciones son ideales para desarrollarse con Node.js?
+
+Principalmente cualquier aplicación para la web, ya que JS es un lenguaje nativo del navegador, lo que nos permite construir una app desde cero utilizando un solo lenguaje de programación. Pero a día de hoy, se pueden construir multitud de aplicaciones en Node.js, por ejemplo: APIs; aplicaciones en tiempo real que hagan uso de web sockets, como chats o juegos en línea; o Bots (Discord) y microservicios.
+
+¿Qué es Express y cuál es su rol dentro de un proyecto con Node?
+
+Express es un framework desarrollado para Node.js, una caja de herramientas que facilita la creación de aplicaciones web, permitiéndonos gestionar solicitudes
+HTTP, establecer middlewares y definir rutas con facilidad, entre otras funcionalidades.
+
+Menciona al menos 3 ventajas de usar Express.
+
+Su sintaxis es muy simple, como lo es también el establecimiento de rutas y servidores; cuenta con una amplia integración con motores de plantillas; es minimalista y modular, lo que permite agregar configuraciones y funcionalidades a las aplicaciones según nuestras necesidades como desarrolladores. 
+
+¿Cuál es la diferencia entre Node.js puro y Express?
+
+Node.js simplemente permite ejecutar JS en el servidor, Express es un framework ya optimizado para la creación rápida y sencilla de aplicaciones web. Express está basado en Node.js y pensado para ejecutarse en un entorno Node.js. 
+
+¿Qué es un middleware en Express?
+
+Es una función que nos permite interrumpir el ciclo de vida de una solicitud HTTP (req->res->next) para ejecutar código, ya sea para modificar la solicitud o la respuesta, o para realizar operaciones antes de enviar la respuesta final al cliente.
+
+¿Qué es el enrutamiento (routing) y para qué sirve en Express?
+
+El routing en Express es el proceso de definición de rutas que ejecutan ciertos protocolos HTTP (GET, POST, PUT, DELETE) y su fin es manejar de forma eficiente las solicitudes de los clientes.
+
+¿Qué es un motor de plantillas? ¿Cuál es su utilidad?
+
+Es una herramienta que permite la generación dinámica de contenido HTML, basado en plantillas. Son útiles porque permiten generar contenido según las solicitudes e inputs del usuario, brindando aplicaciones interactivas y personalizables.
+
+Busca y menciona 3 paquetes populares de Node.js y para qué se utilizan.
+(Puedes usar npmjs.com para ayudarte)
+
+1. React: librería JS desarrollada por Facebook para la creación de interfaces de usuario.
+
+2. Babel: compilador JS para transformar código JS moderno (ES2015+) en versiones compatibles con navegadores antiguos.
+
+3. Socket.IO: librería que habilita comunicación bidireccional en tiempo real, basada en eventos, entre clientes y sevidor. 
+
+Reflexiona brevemente:
+¿Por qué crees que es importante entender bien cómo funciona el ciclo de vida de una aplicación Node.js antes de construir APIs?
+
+Porque la función de una API es establecer las reglas de comunicación entre nuestro frontend y backend, integrando estos dos campos. Por eso, para construir una API adecuada, hace falta interiorizarte antes con el diseño de éstas áreas y sus componentes:
+
+-Planificación: los requisitos y funcionalidades mínimas de la aplicación y la estructura de la base de datos.
+
+-Backend: la creación de servidores, manejo de rutas y conexión con base de datos.
+
+-Frontend: como será la interfaz de usuario.
+
