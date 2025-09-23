@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buenas prácticas ciberseguridad</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body class="bg-body-secondary vh-100">
+    <nav class="navbar sticky-top navbar-expand-sm">
+        <div class="container-fluid gap-4">
+            <a href="./index.html" class="navbar-brand">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="navbar-nav">
+                    <a href="./amenazas.html" class="nav-link fw-semibold me-4">
+                        Amenazas comunes
+                    </a>
+                    <a href="./buenas_practicas.html" class="nav-link fw-semibold disabled" aria-current="page"
+                        aria-disabled="true">
+                        Consejos de ciberseguridad
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!--Listado de consejos ciberseguridad-->
+        <section class="lista-tips mx-5 my-4 text-center">
+            <h3>Buenas prácticas de ciberseguridad</h3>
+            <ul style="text-align: justify">
+                <li><strong>Contraseñas seguras:</strong> usa contraseñas largas (mínimo 12 caracteres), únicas para
+                    cada cuenta, con letras, números y símbolos.</li>
+
+                <li><strong>Autenticación de dos factores (2FA):</strong> activa 2FA para añadir una capa extra de
+                    protección (algo que sabes + un dispositivo que tienes).</li>
+
+                <li><strong>Cambio de contraseñas predeterminadas:</strong> modifica las contraseñas predeterminadas de
+                    tu router y red Wi-Fi.</li>
+
+                <li><strong>Redes seguras:</strong> usa una VPN en redes públicas y asegúrate de que tu router tenga el
+                    firmware actualizado.</li>
+
+                <li><strong>Protección contra malware:</strong> instala y actualiza software antivirus, y evita
+                    descargar archivos de fuentes no confiables.</li>
+
+                <li><strong>Identificación de phishing:</strong> revisa remitentes, enlaces sospechosos, errores
+                    gramaticales y nunca des datos sensibles por email.</li>
+
+                <li><strong>Actualizaciones de seguridad:</strong> activa las actualizaciones automáticas de tus
+                    dispositivos y aplicaciones.</li>
+
+                <li><strong>Seguridad en dispositivos múltiples:</strong> protege todos tus dispositivos conectados a
+                    internet, no solo tu computadora.</li>
+            </ul>
+            <p>Estas prácticas refuerzan tu defensa ante ciberataques comunes y mejoran tu privacidad online.</p>
+            <button type="button" class="btn btn-primary my-3 text-black fw-semibold" id="botonModal">Realizar quiz de
+                seguridad</button>
+        </section>
+
+        <!--Formulario subscripción boletín ciberseguridad-->
+        <form class="mx-5" id="boletin">
+            <p class="lead text-center">Suscríbete a nuestro boletín para recibir más consejos sobre ciberseguridad</p>
+            <div class="mb-3">
+                <label for="inputNombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="inputNombre" class="form-control" aria-required="true">
+            </div>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Correo electrónico</label>
+                <input type="email" name="e-mail" id="inputEmail" class="form-control" aria-required="true">
+            </div>
+            <button type="submit" class="btn btn-primary mb-5 text-black fw-semibold"
+                id="botonBoletin">Suscribirse</button>
+        </form>
+
+        <!--Modal quiz ciberseguridad-->
+        <div class="modal" tabindex="-1" aria-labelledby="quizModalTitle">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-auto" id="quizModalTitle">Quiz de ciberseguridad</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body m-3">
+                        <form id="quizForm">
+                            <div class="mb-4">
+                                <p><strong>1. ¿Qué deberías hacer si recibes un correo sospechoso que parece de tu
+                                        banco?</strong></p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" value="a">
+                                    <label class="form-check-label">Hacer clic en el enlace para comprobarlo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" value="b">
+                                    <label class="form-check-label">Ignorarlo completamente</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" value="c">
+                                    <label class="form-check-label">Verificar el remitente y contactar al banco por
+                                        canales
+                                        oficiales</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <p><strong>2. ¿Cuál es una buena práctica para proteger tus contraseñas?</strong></p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" value="a">
+                                    <label class="form-check-label">Usar la misma contraseña para todo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" value="b">
+                                    <label class="form-check-label">Anotarlas en un papel pegado al monitor</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" value="c">
+                                    <label class="form-check-label">Usar un gestor de contraseñas y combinaciones
+                                        seguras</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <p><strong>3. ¿Qué es el ransomware?</strong></p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" value="a">
+                                    <label class="form-check-label">Un software que bloquea tus datos hasta que pagues
+                                        un
+                                        rescate</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" value="b">
+                                    <label class="form-check-label">Un antivirus especializado en proteger la
+                                        nube</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" value="c">
+                                    <label class="form-check-label">Una red privada para navegar seguro</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <p><strong>4. ¿Qué deberías hacer al conectarte a una red Wi-Fi pública?</strong></p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" value="a">
+                                    <label class="form-check-label">Evitar acceder a cuentas sensibles y usar una
+                                        VPN</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" value="b">
+                                    <label class="form-check-label">Ingresar normalmente a banca online y correo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" value="c">
+                                    <label class="form-check-label">Compartir la red con desconocidos</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <p><strong>5. ¿Cuál es el objetivo de un ataque DDoS?</strong></p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" value="a">
+                                    <label class="form-check-label">Robar contraseñas mediante correos falsos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" value="b">
+                                    <label class="form-check-label">Inundar un servicio con tráfico para hacerlo
+                                        inaccesible</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" value="c">
+                                    <label class="form-check-label">Encriptar archivos para pedir un rescate</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <p><strong>6. ¿Qué acción es recomendable para mantener tu sistema seguro?</strong></p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q6" value="a">
+                                    <label class="form-check-label">Desactivar las actualizaciones automáticas</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q6" value="b">
+                                    <label class="form-check-label">Mantener actualizado el sistema y
+                                        aplicaciones</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q6" value="c">
+                                    <label class="form-check-label">Instalar programas de fuentes desconocidas</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div id="resultadosQuiz" class="mt-4 alert d-none mx-auto"></div>
+                        <button type="submit" class="btn btn-primary mx-auto" id="btnValidarQuiz">Enviar
+                            respuestas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
