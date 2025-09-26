@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  height: 100dvh;
+}
+
+header {
+  text-align: center;
+  background-color: steelblue;
+  padding: 1.5rem;
+}
+
+main {
+  padding: 2.5rem;
+  text-align: justify;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 80%;
+}
+
+footer {
+  background-color: steelblue;
+  padding: 1rem;
+}
