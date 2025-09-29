@@ -30,6 +30,9 @@ Asegúrate de que el servidor esté corriendo en `http://localhost:8000` y abre 
    ```
 
 4. Eliminar una tarea (DELETE):
-   `   curl -X DELETE http://localhost:8000/tasks/1
-   `
+
+   ```
+   curl -X DELETE http://localhost:8000/tasks/1
+   ```
+
    Nota: Para todas las rutas que requieren un id, reemplaza 1 por el ID de la tarea que deseas modificar o eliminar.
