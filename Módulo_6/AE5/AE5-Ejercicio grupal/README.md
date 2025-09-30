@@ -1,4 +1,4 @@
-# Módulo 6 - AE5 - ejercicio grupal, grupo 4: gestor de inventario en Node.js
+# Módulo 6 - AE5 - ejercicio grupal, sala 4: gestor de inventario en Node.js
 
 Este proyecto es una pequeña aplicación en Node.js que simula un **sistema de gestión de inventarios**. Los productos (con propiedades como nombre, precio y cantidad) se almacenan en un archivo JSON (`products.json`).  
 Las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) se realizan a través de rutas HTTP proporcionadas por un servidor Express.
