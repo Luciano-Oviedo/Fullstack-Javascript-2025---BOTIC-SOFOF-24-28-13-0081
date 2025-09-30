@@ -23,18 +23,18 @@ function addProduct(ruta, nuevoProducto) {
 }
 
 // Función para modificar productos
-function updateProduct(ruta, id, datosActualizados) {
+function updateProduct(ruta, id, newData) {
   let datos = readProducts(ruta);
-  const archivo = datos.find((archivo) => archivo.id === id);
-  if (!archivo) {
-    console.error("no se encontró un archivo con ese ID");
+  const producto = datos.find((producto) => producto.id === id);
+  if (!producto) {
+    return null;
   } else {
-    const claves = Object.keys(datosActualizados);
+    const claves = Object.keys(newData);
     claves.forEach((clave) => {
-      archivo[clave] = datosActualizados[clave];
+      producto[clave] = newData[clave];
     });
     writeProducts(ruta, datos);
-    return archivo;
+    return producto;
   }
 }
 
@@ -43,7 +43,7 @@ function deleteProduct(ruta, id) {
   let datos = readProducts(ruta);
   let eliminado;
 
-  const datosFiltrados = datos.filter((archivo) => archivo.id !== id);
+  const datosFiltrados = datos.filter((producto) => producto.id !== id);
 
   if (datos.length === datosFiltrados.length) {
     eliminado = false;
