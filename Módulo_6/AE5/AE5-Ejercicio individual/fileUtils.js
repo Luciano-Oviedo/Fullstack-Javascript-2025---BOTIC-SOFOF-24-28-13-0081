@@ -1,8 +1,8 @@
-import fs from 'fs';
+import fs from "fs";
 
 // Función sincrónica para leer archivos
 const leerArchivo = (ruta) => {
-  const contenido = fs.readFileSync(ruta, 'utf-8');
+  const contenido = fs.readFileSync(ruta, "utf-8");
   return JSON.parse(contenido);
 };
 
@@ -11,9 +11,9 @@ const escribirArchivo = (ruta, datos) => {
   fs.writeFileSync(ruta, JSON.stringify(datos, null, 2));
 };
 
-// Función sincrónica para agregar archivos
+// Función para agregar archivos
 const agregarArchivo = (ruta, nuevoArchivo) => {
-    const datos = leerArchivo(ruta);
+  const datos = leerArchivo(ruta);
 
   datos.push(nuevoArchivo);
 
@@ -22,37 +22,42 @@ const agregarArchivo = (ruta, nuevoArchivo) => {
   return nuevoArchivo;
 };
 
-// Función sincrónica para modificar archivos
+// Función para modificar archivos
 const modificarArchivoPorId = (ruta, id, datosActualizados) => {
- let datos = leerArchivo(ruta);
- const archivo = datos.find(archivo => archivo.id === id);
- if (!archivo) {
+  let datos = leerArchivo(ruta);
+  const archivo = datos.find((archivo) => archivo.id === id);
+  if (!archivo) {
     console.error("no se encontró un archivo con ese ID");
- } else {
+  } else {
     const claves = Object.keys(datosActualizados);
-    claves.forEach(
-        clave => {
-            archivo[clave] = datosActualizados[clave];
-        }
-    )
+    claves.forEach((clave) => {
+      archivo[clave] = datosActualizados[clave];
+    });
     escribirArchivo(ruta, datos);
     return archivo;
-    }};
+  }
+};
 
-// Función sincrónica para eliminar archivos
+// Función para eliminar archivos
 const eliminarArchivoPorId = (ruta, id) => {
   let datos = leerArchivo(ruta);
   let eliminado;
 
-  const datosFiltrados = datos.filter(archivo => archivo.id !== id);
+  const datosFiltrados = datos.filter((archivo) => archivo.id !== id);
 
   if (datos.length === datosFiltrados.length) {
     eliminado = false;
   } else {
-      escribirArchivo(ruta, datosFiltrados);
-      eliminado = true;
+    escribirArchivo(ruta, datosFiltrados);
+    eliminado = true;
   }
-     return eliminado;
+  return eliminado;
 };
 
-export {leerArchivo, escribirArchivo, agregarArchivo, modificarArchivoPorId, eliminarArchivoPorId};
+export {
+  leerArchivo,
+  escribirArchivo,
+  agregarArchivo,
+  modificarArchivoPorId,
+  eliminarArchivoPorId,
+};
