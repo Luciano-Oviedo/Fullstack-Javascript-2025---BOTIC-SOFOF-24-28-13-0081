@@ -11,7 +11,7 @@ function writeProducts(ruta, datos) {
   fs.writeFileSync(ruta, JSON.stringify(datos, null, 2));
 }
 
-// Función sincrónica para agregar productos
+// Función para agregar productos
 function addProduct(ruta, nuevoProducto) {
   const datos = readProducts(ruta);
 
@@ -22,7 +22,7 @@ function addProduct(ruta, nuevoProducto) {
   return nuevoProducto;
 }
 
-// Función sincrónica para modificar productos
+// Función para modificar productos
 function updateProduct(ruta, id, datosActualizados) {
   let datos = readProducts(ruta);
   const archivo = datos.find((archivo) => archivo.id === id);
@@ -38,7 +38,7 @@ function updateProduct(ruta, id, datosActualizados) {
   }
 }
 
-// Función sincrónica para eliminar productos
+// Función para eliminar productos
 function deleteProduct(ruta, id) {
   let datos = readProducts(ruta);
   let eliminado;
