@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista de tareas</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <header role="banner">
+        <h1 id="titulo_app">Lista de tareas</h1>
+    </header>
+    <main role="main" aria-labelledby="titulo_app">
+        <form action="" id="form" role="form" aria-labelledby="titulo_form">
+            <h2 id="titulo_form">Agregar tarea</h2>
+            <div>
+                <label for="nombre_tarea">Nombre</label>
+                <input type="text" name="nombre tarea" id="nombre_tarea" maxlength="50" aria-required="true">
+            </div>
+            <div>
+                <label for="descripcion_tarea">Descripción</label>
+                <textarea name="descripción tarea" id="descripcion_tarea" maxlength="200"></textarea>
+            </div>
+            <button type="button" id="agregar_tarea" aria-label="Agregar nueva tarea">Agregar</button>
+        </form>
+        <div id="div_tareas" role="region" aria-labelledby="titulo_lista">
+            <h2 id="titulo_lista">Lista de tareas</h2>
+            <ul id="tus_tareas" role="list">
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
