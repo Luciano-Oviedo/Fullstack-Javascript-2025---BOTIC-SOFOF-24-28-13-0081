@@ -1,4 +1,5 @@
 *.txt
+node_modules
 /Módulo_ 2/AE2/
 /Módulo_ 2/AE3/
 /Módulo_ 2/AE4/
@@ -17,6 +18,4 @@
 /Módulo_5/EVALUACION_MODULO/url github-M5 evaluación módulo.txt
 /Módulo_6/AE3/M6-AE3-ABP-GRUPO SALA 4.zip
 /Módulo_ 2/AE3_ABPRO-Ejercicio grupal.zip
-/Módulo_6/AE4/Ejercicio_individual/node_modules
-/Módulo_6/AE5/AE5-Ejercicio individual/node_modules
-/Módulo_6/AE5/AE5-Ejercicio grupal/node_modules
+Módulo_6/AE6/AE6-ABPRO-SALA 4.zip
