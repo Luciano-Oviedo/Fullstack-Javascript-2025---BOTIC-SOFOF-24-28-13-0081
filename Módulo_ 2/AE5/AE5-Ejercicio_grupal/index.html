@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibroLibre</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="./JS/script.js" defer></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <p><strong>LibroLibre</strong></p>
+        <div class="enlaces">
+            <a href="#catalogo">Catálogo</a>
+            <a href="#registro">Registro</a>
+            <a href="#sobreNosotros">Sobre nosotros</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="barra-búsqueda">
+            <h1>Catálogo de libros</h1>
+            <div class="formulario-búsqueda">
+                <input type="search" name="barra búsqueda" id="catalogo" placeholder="Buscar por título, autor o género">
+                <input type="submit" value="Buscar" id="botonBuscar">
+            </div>
+            <p id="contadorResultados"></p>
+        </section>
+        
+        <section class="lista-libros">
+            <div class="tarjeta-libro">
+                <h3>El Principito</h3>
+                <p><strong>Autor: </strong>Antoine de Saint-Exupéry</p>                    
+                <p><strong>Género: </strong> Ficción</p>
+                <p>Una historia poética sobre un pequeño príncipe y sus viajes.</p>
+            </div>
+            <div class="tarjeta-libro">
+                <h3>Clean Code</h3>
+                <p><strong>Autor: </strong> Robert C. Martin</p>
+                <p><strong>Género: </strong>Programación</p>
+                <p>Una guía para escribir código limpio y mantenible.</p>
+            </div>                
+            <div class="tarjeta-libro">
+                <h3>Cien años de soledad</h3>
+                <p><strong>Autor: </strong>Gabriel García Márquez</p>
+                <p><strong>Género: </strong>Realismo mágico</p>
+                <p>Una saga familiar ambientada en el mítico pueblo de Macondo.</p>
+            </div>
+             <div class="tarjeta-libro">
+                <h3>Sapiens: De animales a dioses</h3>
+                <p><strong>Autor: </strong>Yuval Noah Harari</p>
+                <p><strong>Género: </strong>Historia</p>
+                <p>Un recorrido fascinante por la evolución del ser humano, desde el Homo sapiens primitivo hasta las sociedades modernas.</p>
+            </div>
+             <div class="tarjeta-libro">
+                <h3>La Odisea</h3>
+                <p><strong>Autor: </strong>Homero</p>
+                <p><strong>Género: </strong>Mitología</p>
+                <p>La legendaria travesía de Odiseo para regresar a Ítaca, enfrentando monstruos, dioses y peligros durante su viaje.</p>                
+            </div>
+            <div class="tarjeta-libro">
+                <h3>Breves respuestas a las grandes preguntas</h3>
+                <p><strong>Autor: </strong>Stephen Hawking</p>
+                <p><strong>Género: </strong>Divulgación científica</p>
+                <p>Una reflexión clara y accesible sobre los misterios del universo, desde el origen del cosmos hasta el futuro de la humanidad.</p>
+            </div>
+        </section>
+
+        <form action="#" id="formularioRegistro">
+            <h2>Registro de usuarios</h2>
+            <input type="text" name="campo nombre" placeholder="Nombre completo" id="registro" class="input-registro">
+            <input type="email" name="campo mail" placeholder="Correo electrónico" class="input-registro">
+            <input type="password" name="campo contraseña" placeholder="Contraseña" class="input-registro">
+            <input type="submit" value="Registrarse" id="botonRegistro">
+        </form>
+    </main>
+
+    <footer id="sobreNosotros">
+        <h2>Sobre nosotros</h2>
+        <p>LibroLibre es una biblioteca digital creada por tres entusiastas de la lectura con el objetivo de facilitar el acceso a libros electrónicos y audiolibros, de manera simple y eficiente.</p>
+    </footer>
+</body>
+
+</html>
