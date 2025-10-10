@@ -1,0 +1,118 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  color: #f1f1f1;
+  background-color: rgb(112, 133, 160);
+}
+
+header {
+  height: 5%;
+}
+
+main {
+  height: 90%;
+  padding: 40px;
+  max-width: 1024px;
+  min-width: 380px;
+}
+
+#bloque-foto-perfil {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#bloque-foto-perfil img {
+  height: 100%;
+  width: auto;
+  border-radius: 5px;
+  border: 3px solid #a9bdd3;
+}
+
+#bloque-sobre-mi {
+  height: 75%;
+}
+
+#carrusel {
+  height: 80%;
+  width: 90%;
+}
+
+.carousel-inner {
+  overflow-y: auto;
+  margin-inline: 20px;
+}
+
+.carousel-indicators {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.titulo-proyecto {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.imagen-proyecto {
+  height: 60%;
+  overflow-x: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer {
+  height: 5%;
+  min-height: fit-content;
+  background-color: rgb(82, 98, 120);
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  color: #9ec2ff;
+  text-decoration: none;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: rgb(112, 133, 160);
+  color: #f1f1f1;
+  border-color: #dee2e6 #dee2e6 rgb(112, 133, 160);
+}
+
+.nav-tabs .nav-link {
+  color: #e0e6eb;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 450px) {
+  #bloque-foto-perfil {
+    align-items: center;
+  }
+
+  #carrusel {
+    height: 70%;
+    width: 90%;
+  }
+}
