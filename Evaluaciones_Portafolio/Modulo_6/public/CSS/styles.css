@@ -1,0 +1,79 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  min-width: 100dvw;
+}
+
+main {
+  height: 100dvh;
+  background-color: lightskyblue;
+  padding: 20px;
+}
+
+h1,
+#enlace-productos {
+  text-align: center;
+  margin: 5px;
+}
+
+#seccionProductos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+#parrafoError {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+#formulario {
+  flex: 0 1 300px;
+  min-width: 200px;
+}
+
+input,
+textarea {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+#listaProductos {
+  flex: 0 1 500px;
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+#errorGlobal,
+#volverHome {
+  text-align: center;
+  display: block;
+  padding-top: 20px;
+}

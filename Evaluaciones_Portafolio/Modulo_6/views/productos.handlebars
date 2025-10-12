@@ -1,0 +1,36 @@
+<main>
+  <div id="seccionProductos">
+    <form action="/productos" method="post" id="formulario">
+      <label for="nombre_producto">
+        Nombre:
+      </label>
+      <input type="text" name="nombre" id="nombre_producto" maxlength="30" />
+      <label for="descripcion_producto">Descripción:</label>
+      <textarea
+        name="descripcion"
+        id="descripcion_producto"
+        maxlength="250"
+      ></textarea>
+      <label for="precio">Precio:</label>
+      <input type="number" name="precio" id="precio" />
+      <input type="submit" value="Agregar producto" />
+      {{#if error}}
+        <p id="parrafoError">{{error}}</p>
+      {{/if}}
+    </form>
+
+    <div id="listaProductos">
+      <h3>Tus productos</h3>
+
+      <ul>
+        {{#each listaProductos}}
+          <li>
+            <p>Nombre: {{nombre}}.</p>
+            <p>Descripción: {{descripcion}}.</p>
+            <p>Precio: ${{precio}}.</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Producto de prueba 1",
+    "descripcion": "Producto para probar el funcionamiento de la aplicación",
+    "precio": "500"
+  },
+  {
+    "nombre": "Producto de prueba 2",
+    "descripcion": "Producto para probar el renderizado como lista",
+    "precio": "1000"
+  }
+]
