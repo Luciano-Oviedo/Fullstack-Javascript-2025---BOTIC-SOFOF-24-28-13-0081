@@ -8,7 +8,7 @@
     "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Luciano Oviedo",
   "license": "ISC",
   "description": "Evaluación de portafolio - Módulo 6",
   "devDependencies": {
