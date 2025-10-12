@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  height: 100dvh;
+  min-height: 100dvh;
   background-color: lightskyblue;
   padding: 20px;
 }
