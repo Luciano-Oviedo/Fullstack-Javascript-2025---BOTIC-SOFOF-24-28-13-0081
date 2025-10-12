@@ -1,10 +1,11 @@
 *.txt
+.env
 node_modules
 /Módulo_ 2/AE2/
-/Módulo_ 2/AE3/
+/Módulo_ 2/AE3/AE3_ABPRO-Ejercicio grupal
 /Módulo_ 2/AE4/
-/Módulo_ 2/AE5/
-/Módulo_ 2/AE6/
+/Módulo_ 2/AE5/AE5_Ejercicio_individual
+/Módulo_ 2/AE6/AE6_ABP-Ejercicio individual
 /Módulo_ 2/AE7/
 /Módulo_ 2/Evaluación Módulo/URL github-evaluación módulo-M2.txt
 /Módulo_3/
