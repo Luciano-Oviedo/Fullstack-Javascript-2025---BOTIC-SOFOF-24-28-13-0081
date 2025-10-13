@@ -1,0 +1,51 @@
+<main>
+  <div id="seccionContactos">
+    <form action="/contactos" method="post" id="formulario">
+      <label for="nombre">
+        Nombre:
+      </label>
+      <input type="text" name="nombre" id="nombre" maxlength="30" />
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" name="telefono" id="telefono" maxlength="12" />
+      <label for="email">Correo electrónico:</label>
+      <input type="email" name="email" id="email" maxlength="50" />
+
+      <input type="submit" value="Agregar contacto" id="botonAgregar" />
+      {{#if error}}
+        <p id="parrafoError">{{error}}</p>
+      {{/if}}
+    </form>
+
+    <div id="listaContactos">
+      <h3>Tus contactos</h3>
+      {{#if listaContactos.length}}
+        <ul>
+          {{#each listaContactos}}
+            <li>
+              <p>ID: {{id}}.</p>
+              <p>Nombre: {{nombre}}.</p>
+              <p>Teléfono: {{telefono}}.</p>
+              <p>Correo electrónico: {{email}}.</p>
+
+              <!-- Botón para editar -->
+              <form
+                action="/contactos/{{id}}/editar"
+                method="get"
+                id="botonEditar"
+              >
+                <button type="submit">Editar</button>
+              </form>
+
+              <!-- Botón para eliminar -->
+              <form action="/contactos/{{id}}" method="post" id="botonEliminar">
+                <button type="submit">Eliminar</button>
+              </form>
+            </li>
+          {{/each}}
+        </ul>
+      {{else}}
+        <p>Aún no has agregado ningún contacto</p>
+      {{/if}}
+    </div>
+  </div>
+</main>

@@ -1,0 +1,50 @@
+<main>
+
+  <form
+    action="/contactos/{{contacto.id}}/editar"
+    method="post"
+    id="formularioEdicion"
+  >
+    <h2>Editar Contacto</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input
+      type="text"
+      name="nombre"
+      id="nombre"
+      maxlength="30"
+      value="{{contacto.nombre}}"
+      required
+    />
+
+    <label for="telefono">Teléfono:</label>
+    <input
+      type="tel"
+      name="telefono"
+      id="telefono"
+      maxlength="12"
+      value="{{contacto.telefono}}"
+      required
+    />
+
+    <label for="email">Correo electrónico:</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      maxlength="50"
+      value="{{contacto.email}}"
+      required
+    />
+
+    <button type="submit">Guardar cambios</button>
+
+    {{#if error}}
+      <p id="parrafoError">{{error}}</p>
+    {{/if}}
+  </form>
+  <p>
+    {{mensaje}}
+  </p>
+  <a href="/contactos" id="volverAContactos">Volver a la lista de contactos</a>
+</main>
