@@ -107,4 +107,4 @@ F. Eliminar registros:
 DELETE http://localhost:4020/usuarios/1
 ```
 
-- Para probar las validaciones de cada ruta, se pueden omitir campos del cuerpo o ingresar tipos de datos distintos a los esperados para verificar el manejo de errores por parte de la API.
+Para probar las validaciones de cada ruta, se pueden omitir campos del cuerpo o ingresar tipos de datos distintos a los esperados para verificar el manejo de errores por parte de la API.
