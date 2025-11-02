@@ -380,7 +380,7 @@ async function eliminarUsuario(id_usuario) {
 
     // Mostramos un mensaje de confirmación en consola
     console.log(
-      `Usuario con ID: ${id_usuario} ha sido eliminado exitósamente.`
+      `Usuario con ID: ${id_usuario} ha sido eliminado exitosamente.`
     );
   } catch (error) {
     console.error("Error:", error);
@@ -411,7 +411,7 @@ async function eliminarRol(id_rol) {
 
     // Mostramos un mensaje de confirmación en consola
     console.log(
-      `Rol con ID: ${id_rol} y sus usuarios asociados, ha sido eliminado exitósamente.`
+      `Rol con ID: ${id_rol} y sus usuarios asociados, ha sido eliminado exitosamente.`
     );
   } catch (error) {
     console.error("Error:", error);
