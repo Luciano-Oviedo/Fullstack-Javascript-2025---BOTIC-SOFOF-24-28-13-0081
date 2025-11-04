@@ -2,6 +2,8 @@
 const express = require("express");
 const app = express();
 const PORT = 3060;
+
+// IMPORTACION MODULO FS PARA SIMULAR CONSULTA A DB
 const fs = require("fs/promises");
 
 // MIDDLEWARE PARA PARSEAR JSON DESDE EL CUERPO DE UNA PETICION
