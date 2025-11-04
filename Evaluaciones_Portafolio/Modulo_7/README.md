@@ -9,7 +9,7 @@
 - Diseñar y manejar las relaciones entre las entidades de usuarios y pedidos de manera eficiente y escalable.
 - Utilizar un ORM como Sequelize para interactuar con la base de datos de manera sencilla.
 
-3. P.D.: esta vez implementé las validaciones de ingreso, tipo y formato de datos directamente en la definición de los modelos, aprovechando la propiedad 'validate' de Sequelize. Las validaciones en las funciones CRUD son netamente para comprobar registros duplicados o inexistentes a la hora de hacer consultas.
+P.D.: esta vez implementé las validaciones de ingreso, tipo y formato de datos directamente en la definición de los modelos, aprovechando la propiedad 'validate' de Sequelize. Las validaciones en las funciones CRUD son netamente para comprobar registros duplicados o inexistentes a la hora de hacer consultas.
 
 ## Configuración y ejecución de la aplicación
 
