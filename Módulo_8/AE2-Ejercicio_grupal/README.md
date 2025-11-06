@@ -1,6 +1,6 @@
-## Ejercicio grupal AE2 - Módulo 8 - Sala 3
+# Ejercicio grupal AE2 - Módulo 8 - Sala 3
 
-1. Explicar brevemente los distintos rangos de códigos HTTP
+### Explicar brevemente los distintos rangos de códigos HTTP
 
 - 1XX: los códigos en rango 100 son informativos.
 
@@ -12,17 +12,17 @@
 
 - 5XX: los códigos en rango 500 indican errores del servidor.
 
-2. ¿En qué casos se utiliza cada tipo de petición HTTP?
+### ¿En qué casos se utiliza cada tipo de petición HTTP?
 
 - GET: se utiliza para obtener un recurso.
 - POST: se utiliza para crear un recurso.
 - PUT: se utiliza para actualizar completamente un recurso (usamos PATCH para modificaciones parciales).
 - DELETE: se utiliza para eliminar un recurso.
 
-3. ¿Cómo debe estructurarse un endpoint según la operación?
+### ¿Cómo debe estructurarse un endpoint según la operación?
 
 Se debe definir un método y la ruta debe apuntar a los recursos afectados por ese método.
 
-4. ¿Cuál fue el mayor reto en la creación de este servidor?
+### ¿Cuál fue el mayor reto en la creación de este servidor?
 
 Simular un código de error 500 sin usar operaciones asíncronas y persistencia de datos.
