@@ -8,5 +8,5 @@
     "cantidad": 30
   },
   { "id": 104, "nombre": "Teclado Mecánico", "precio": 110.0, "cantidad": 8 },
-  { "id": 105, "nombre": "Monitor Curvo 27\"", "precio": 350.75, "cantidad": 4 }
+  { "id": 105, "nombre": "Monitor Curvo 27\"", "precio": 350.75, "cantidad": 5 }
 ]
