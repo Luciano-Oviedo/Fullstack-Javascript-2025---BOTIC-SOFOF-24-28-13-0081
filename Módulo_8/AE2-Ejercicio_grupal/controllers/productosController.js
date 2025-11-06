@@ -1,4 +1,7 @@
 const productos = require("../db/productos.json");
+
+// Nota: los errores de validación -status code 400- y respuestas de error personalizadas, se manejan por separado, en el archivo 'validacionMiddleware.js'
+
 const productosController = {
   listarProductos: (req, res) => {
     // Simulamos un error con la base de datos y manejamos error con código de estado 500: Internal server error

@@ -26,3 +26,5 @@ Se debe definir un método y la ruta debe apuntar a los recursos afectados por e
 ### ¿Cuál fue el mayor reto en la creación de este servidor?
 
 Simular un código de error 500 sin usar operaciones asíncronas y persistencia de datos.
+
+### P.D.: los errores de validación -status code 400- y respuestas de error personalizadas, se manejan por separado, en el archivo **validacionMiddleware.js**.
