@@ -1,0 +1,12 @@
+[
+  { "id": 101, "nombre": "Laptop Pro", "precio": 1200.0, "cantidad": 5 },
+  { "id": 102, "nombre": "Smartphone X", "precio": 650.5, "cantidad": 12 },
+  {
+    "id": 103,
+    "nombre": "Auriculares Inalámbricos",
+    "precio": 85.99,
+    "cantidad": 30
+  },
+  { "id": 104, "nombre": "Teclado Mecánico", "precio": 110.0, "cantidad": 8 },
+  { "id": 105, "nombre": "Monitor Curvo 27\"", "precio": 350.75, "cantidad": 4 }
+]
