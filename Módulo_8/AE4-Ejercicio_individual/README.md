@@ -121,9 +121,7 @@ Salida esperada (Status 401):
 
    - URL: http://localhost:4020/profile
 
-   - Headers → Authorization:
-     Tipo: Bearer Token.
-     Valor: pegar el valor del campo 'Token' generado en la ruta /login, sin comillas.
+   - Headers → Authorization → Bearer Token: pegar el valor del campo 'Token' generado en la ruta `/login`, sin comillas.
 
 3.1 Caso exitoso (Status 200):
 
