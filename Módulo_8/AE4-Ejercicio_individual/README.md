@@ -75,21 +75,21 @@ Además, se utiliza el paquete **jsonwebtoken** para crear un token en la ruta `
 
 - Body → raw → JSON:
 
-          ```
-          {
-          "email": "usuario@correo.com",
-          "password": "123456"
-          }
-          ```
+      ```
+      {
+      "email": "usuario@correo.com",
+      "password": "123456"
+      }
+      ```
 
   2.1 Caso exitoso (Status 200):
 
-          ```
-          {
-          "Mensaje": "Has iniciado sesión",
-          "Token": "JWT_GENERADO_AQUI"
-          }
-          ```
+      ```
+      {
+      "Mensaje": "Has iniciado sesión",
+      "Token": "JWT_GENERADO_AQUI"
+      }
+      ```
 
   2.2 Error: campos vacíos o tipos inválidos.
 
@@ -97,11 +97,11 @@ Además, se utiliza el paquete **jsonwebtoken** para crear un token en la ruta `
 
   Salida esperada (Status 400):
 
-        ```
-        {
-        "Mensaje": "Debes ingresar un email y contraseña válidos para continuar"
-        }
-        ```
+      ```
+      {
+      "Mensaje": "Debes ingresar un email y contraseña válidos para continuar"
+      }
+      ```
 
   2.3 Error: Usuario no registrado o contraseña incorrecta.
 
@@ -109,11 +109,11 @@ Además, se utiliza el paquete **jsonwebtoken** para crear un token en la ruta `
 
   Salida esperada (Status 401):
 
-        ```
-        {
-        "Mensaje": "Usuario o contraseña incorrectos"
-        }
-        ```
+      ```
+      {
+      "Mensaje": "Usuario o contraseña incorrectos"
+      }
+      ```
 
 3. Ruta `/profile`:
 
@@ -141,11 +141,11 @@ Además, se utiliza el paquete **jsonwebtoken** para crear un token en la ruta `
 
   Salida esperada (Status 401):
 
-        ```
-        {
-        "Mensaje": "Acceso denegado: No se proporcionó token"
-        }
-        ```
+      ```
+      {
+      "Mensaje": "Acceso denegado: No se proporcionó token"
+      }
+      ```
 
   3.3 Error: Token inválido, alterado o expirado.
 
@@ -153,8 +153,8 @@ Además, se utiliza el paquete **jsonwebtoken** para crear un token en la ruta `
 
   Salida esperada (Status 401):
 
-        ```
-        {
-        "Mensaje": "Acceso denegado: Token inválido"
-        }
-        ```
+      ```
+      {
+      "Mensaje": "Acceso denegado: Token inválido"
+      }
+      ```
