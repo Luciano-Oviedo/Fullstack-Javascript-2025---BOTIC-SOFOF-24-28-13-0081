@@ -2,7 +2,7 @@
 
 Esta aplicación en **Node.js** utiliza **Express** para crear una ruta de registro de usuarios `POST '/register'`, una ruta de inicio de sesión `POST '/login'` y una ruta para contenido protegido `GET '/profile'` que requiere la autenticación del usuario.
 
-Se utiliza **jsonwebtoken** para crear un token en la ruta `/login` y para implementar un middleware de autenticación. Este middleware restringe el acceso a la ruta `/profile`, a menos que el usuario acceda con un token válido generado al iniciar sesión.
+Además, se utiliza el paquete **jsonwebtoken** para crear un token en la ruta `/login` y para implementar un middleware de autenticación. Este middleware restringe el acceso a la ruta `/profile`, a menos que el usuario acceda con un token válido generado al iniciar sesión.
 
 ## Instalación y configuración
 
