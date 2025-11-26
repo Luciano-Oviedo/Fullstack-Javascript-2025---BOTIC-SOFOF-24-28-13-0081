@@ -1,0 +1,25 @@
+{
+  "name": "modulo_8_ev_portafolio",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luciano Oviedo",
+  "license": "ISC",
+  "description": "Evaluación de portafolio-Módulo 8",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "jsonwebtoken": "^9.0.2",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
