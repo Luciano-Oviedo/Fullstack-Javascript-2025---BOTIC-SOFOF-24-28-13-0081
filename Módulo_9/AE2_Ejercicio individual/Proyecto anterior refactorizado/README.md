@@ -1,4 +1,4 @@
-# Evaluación de Portafolio – Módulo 2
+# Evaluación de portafolio – Módulo 2
 
 Este proyecto corresponde a la evaluación del **Módulo 2** del bootcamp _Full Stack JavaScript – Talento Digital_.  
 Integra HTML5, CSS3, Bootstrap, JavaScript y jQuery para construir un sitio web básico, responsivo y funcional que muestra evidencia de trabajo realizado durante el curso.
@@ -16,7 +16,7 @@ Integra HTML5, CSS3, Bootstrap, JavaScript y jQuery para construir un sitio web 
 
 ---
 
-## Descripción del Proyecto
+## Descripción del proyecto
 
 Este repositorio contiene un **portafolio web personal** dividido en dos secciones principales:
 
@@ -30,7 +30,7 @@ El objetivo principal es exhibir evidencia técnica y competencias básicas en d
 
 ---
 
-## Funcionalidades Implementadas
+## Funcionalidades implementadas
 
 - **Navegación mediante pestañas (Tabs)**  
   Implementada manualmente con jQuery para alternar entre “Inicio” y “Proyectos”.
@@ -51,7 +51,7 @@ El objetivo principal es exhibir evidencia técnica y competencias básicas en d
 
 ---
 
-## Estructura del Proyecto
+## Estructura del proyecto
 
 ```
 /
@@ -69,7 +69,7 @@ El objetivo principal es exhibir evidencia técnica y competencias básicas en d
 └── cineflash-mobile.png
 ```
 
-## Instrucciones de Uso
+## Instrucciones de uso
 
 1. Abrir `index.html` en cualquier navegador moderno.
 2. Navegar entre las pestañas **Inicio** y **Proyectos** (hacer clic en las pestañas superiores).
@@ -80,7 +80,7 @@ El objetivo principal es exhibir evidencia técnica y competencias básicas en d
 
 ---
 
-## Decisiones Técnicas
+## Decisiones técnicas
 
 - **Control manual de tabs y carrusel**  
   Aunque Bootstrap 5 soporta tabs y carrusel mediante atributos `data-bs-*`, la lógica se implementó manualmente con jQuery para demostrar manipulación del DOM y eventos.
