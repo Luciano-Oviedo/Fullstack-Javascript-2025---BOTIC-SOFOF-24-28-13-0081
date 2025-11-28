@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2-Evaluación de portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <header role="navigation" class="pt-3">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="sobreMi-tab" data-target="#sobreMi-tab-pane" type="button"
+                    role="tab" aria-controls="sobreMi-tab-pane" aria-selected="true">Inicio</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="proyectos-tab" data-target="#proyectos-tab-pane" type="button" role="tab"
+                    aria-controls="proyectos-tab-pane" aria-selected="false">Proyectos</button>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="tab-content h-100" id="myTabContent">
+            <div class="tab-pane fade show active h-100" id="sobreMi-tab-pane" role="tabpanel"
+                aria-labelledby="sobreMi-tab" tabindex="0">
+                <div id="bloque-foto-perfil" class="mb-5">
+                    <img src="./img/foto-perfil.png" alt="foto de perfil" class="mb-2 d-block">
+                    <h3 class="text-center">Luciano Oviedo</h3>
+                </div>
+                <div id="bloque-sobre-mi">
+                    <h2 class="pt-4">Sobre mi</h2>
+                    <p>
+                        Hola, te doy la bienvenida a mi portafolio. Mi nombre es Luciano, tengo 31 años y estoy
+                        formándome en desarrollo web full stack con una beca de Talento Digital.
+                    </p>
+                    <p>
+                        Me crié, crecí y habito en San Pedro de Atacama, un oasis en el desierto más árido del mundo.
+                        Además de la informática, disfruto de practicar montañismo, los paseos por la naturaleza, viajar
+                        y los juegos de mesa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tab-pane fade h-100" id="proyectos-tab-pane" role="tabpanel" aria-labelledby="proyectos-tab"
+                tabindex="0">
+                <h2>Mis proyectos</h2>
+                <p>
+                    A continuación puedes revisar algunos de los proyectos que he realizado durante el bootcamp de
+                    desarrollo full stack en javascript que estoy cursando.
+                </p>
+                <div id="carrusel" class="carousel carousel-dark slide mx-auto">
+                    <div class="carousel-inner p-5 h-100">
+                        <div class="carousel-item active h-100">
+                            <h5 class="titulo-proyecto">Perfil de redes sociales</h5>
+                            <div class="imagen-proyecto mb-3">
+                                <picture>
+                                    <source media="(max-width: 550px)" srcset="./img/perfil-RRSS-mobile.png">
+                                    <img src="./img/perfil de RRSS con CSS.png"
+                                        class="d-block w-auto mx-auto h-100 img-thumbnail" alt="preview proyecto 1">
+                                </picture>
+                            </div>
+                            <div class="d-block pb-5">
+                                <p>En este proyecto individual, puse en práctica lo aprendido en HTML y CSS con
+                                    contenido estático, simulando un perfil de redes sociales.</p>
+                                <a href="https://github.com/Luciano-Oviedo/Fullstack-Javascript-2025---BOTIC-SOFOF-24-28-13-0081/tree/main/M%C3%B3dulo_%202/AE3/AE3_ABP-Ejercicio%20individual"
+                                    target="_blank">Enlace
+                                    Github</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <h5 class="titulo-proyecto">Librería online</h5>
+                            <div class="imagen-proyecto mb-3">
+                                <picture>
+                                    <source media="(max-width: 550px)" srcset="./img/libreria-online-mobile.png">
+                                    <img src="./img/librería online con JS.png"
+                                        class="d-block w-auto mx-auto h-100 img-thumbnail" alt="preview proyecto 2">
+                                </picture>
+                            </div>
+                            <div class="d-block pb-5">
+                                <p>Este proyecto grupal integró HTML, CSS y JS. El objetivo fue dotar de interactividad
+                                    la web de una librería online, usando JS para un filtro de búsqueda y validar un
+                                    formulario de registro.</p>
+                                <a href="https://github.com/Luciano-Oviedo/Fullstack-Javascript-2025---BOTIC-SOFOF-24-28-13-0081/tree/main/M%C3%B3dulo_%202/AE5/AE5-Ejercicio_grupal"
+                                    target="_blank">Enlace
+                                    Github</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <h5 class="titulo-proyecto">Sistema de reservas cine local</h5>
+                            <div class="imagen-proyecto mb-3">
+                                <picture>
+                                    <source media="(max-width: 550px)" srcset="./img/cineflash-mobile.png">
+                                    <img src="./img/cineflash.png" class="d-block w-auto mx-auto h-100 img-thumbnail"
+                                        alt="preview proyecto 3">
+                                </picture>
+                            </div>
+                            <div class="d-block">
+                                <p>Este proyecto grupal simuló un sistema de reservas para la web de un cine local e
+                                    integró HTML, estilos con Bootstrap y manipulación del DOM con jQuery.</p>
+                                <a href="https://github.com/Luciano-Oviedo/Fullstack-Javascript-2025---BOTIC-SOFOF-24-28-13-0081/tree/main/M%C3%B3dulo_%202/AE6/AE6_ABPRO_GRUPO5"
+                                    target="_blank">Enlace
+                                    GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="py-2 px-4"><strong>Luciano Oviedo | 2025</strong></p>
+    </footer>
+</body>
+
+</html>
