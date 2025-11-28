@@ -53,6 +53,7 @@ El objetivo principal es exhibir evidencia técnica y competencias básicas en d
 
 ## Estructura del Proyecto
 
+```
 /
 ├── index.html
 ├── style.css
@@ -66,6 +67,7 @@ El objetivo principal es exhibir evidencia técnica y competencias básicas en d
 ├── libreria-online-mobile.png
 ├── cineflash.png
 └── cineflash-mobile.png
+```
 
 ## Instrucciones de Uso
 
