@@ -1,5 +1,7 @@
 *.txt
 .env
+*.pdf
+*.zip
 node_modules
 /Módulo_ 2/AE2/
 /Módulo_ 2/AE3/AE3_ABPRO-Ejercicio grupal
