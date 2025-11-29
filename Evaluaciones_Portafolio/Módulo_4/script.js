@@ -25,11 +25,13 @@ class Producto {
 const obtenerProductos = async () => {
   try {
     const peticion = await fetch(
-      `https://api.escuelajs.co/api/v1/products?offset=0&limit=10` // fetch API para obtener los productos y mostrar los primeros 10 artículos
+      "https://dummyjson.com/products/category/smartphones?&limit=10" // fetch API para obtener la categoría 'smartphones', limitada a 10 resultados
     );
     if (!peticion.ok) throw new Error(`Error ${peticion.status}`);
 
-    const productos = await peticion.json();
+    const data = await peticion.json();
+
+    const productos = data.products;
 
     const listaProductos = []; // Arreglo vacío para guardar los productos
 
@@ -39,9 +41,9 @@ const obtenerProductos = async () => {
         producto.id,
         producto.title,
         producto.price,
-        producto.category.name,
+        producto.category,
         producto.description,
-        producto.images?.[0] || null
+        producto.images[0]
       );
       listaProductos.push(objeto);
     });
@@ -64,12 +66,10 @@ const estructuraWeb = async () => {
     const seccionProductos = document.createElement("section");
     seccionProductos.className = "seccionProductos";
 
-    // Esta función nos permite formatear la imagen de IMGUR que nos otorga la API para que se pueda mostrar
-    const formatImgurUrl = (url) => {
+    // Esta función nos permite mostrar un placeholder si no carga la imagen
+    const imgUrl = (url) => {
       if (!url) return "https://via.placeholder.com/250x250?text=No+Image";
-      return `https://images.weserv.nl/?url=${encodeURIComponent(
-        url.replace(/^https?:\/\//, "")
-      )}`;
+      return url;
     };
     productos.forEach((producto) => {
       // Por cada producto del array se ejecuta la siguiente función:
@@ -84,7 +84,7 @@ const estructuraWeb = async () => {
       contenedorImagen.className = "contenedorImagen";
       const imagen = document.createElement("img");
       imagen.alt = `Imagen del producto ${nombre}`;
-      imagen.src = formatImgurUrl(img);
+      imagen.src = imgUrl(img);
 
       const infoProducto = document.createElement("div");
       infoProducto.className = "infoProducto";
@@ -122,6 +122,7 @@ const estructuraWeb = async () => {
 const contadorCarrito = document.getElementById("contadorCarrito"); // Parrafo que cuenta nuestros artículos en el carrito
 const carrito = document.querySelector(".seccionCarrito"); // Modal de nuestro carrito en el HTML
 const contenidoCarrito = document.getElementById("carritoCompras"); // Sección interna de nuestro carrito
+const botonFinalizarCompra = document.getElementById("botonFinalizarCompra"); // Botón para finalizar compra
 
 // 3.2 Eventos
 
@@ -184,4 +185,12 @@ const cerrarCarrito = document.getElementById("cerrarCarrito");
 
 cerrarCarrito.addEventListener("click", () => {
   carrito.classList.remove("activo");
+});
+
+// Este evento da una alerta en el navegador de que no se ha implementado una pasarela de pagos
+
+const finalizarCompra = botonFinalizarCompra.addEventListener("click", () => {
+  alert(
+    "Esta demo no tiene implementada una pasarela de pagos, felicitaciones por llegar hasta aquí ;)"
+  );
 });
