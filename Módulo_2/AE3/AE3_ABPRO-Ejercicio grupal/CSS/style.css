@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 767px) {
+    .formulario {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .formulario {
+        width: 80%;
+    }
+}
+@media (min-width: 1024px) {
+    .formulario {
+        width: 60%;
+    }
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 252, 250);
+    min-height: 100dvh;
+}
+header {
+    background-color: rgb(4, 204, 88);
+    color: rgb(214, 235, 236);
+    margin: none;
+    height: 40px;
+}
+section {
+    margin: 30px;
+    max-width: 1000px;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 6px;
+}
+#botón {
+    width: fit-content;
+    height: fit-content;
+    padding: 6px;
+    background-color: rgb(4, 204, 88);
+    color: rgb(214, 235, 236);
+    font-weight: 600;
+    border: white;
+    border-radius: 5%;
+    align-self: center;
+}
+#botón:hover {
+  font-size: 15px;
+}
+footer {
+    text-align: center;
+    font-weight: 600;
+    margin-top: auto;
+    color: rgb(214, 235, 236);
+    background-image: url(../IMG/pastos.jpg) !important;
+    padding-block: 8px;
+}

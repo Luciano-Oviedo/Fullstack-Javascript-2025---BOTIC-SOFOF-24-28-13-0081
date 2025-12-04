@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería modal</title>
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="./JS/script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Choose your class</h1>
+  </header>
+  <main>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/thumb/b/bc/SwordsmanATK.jpeg/300px-SwordsmanATK.jpeg" class="imgClaseRPG"
+        alt="Swordman" id="Swordman">
+      <p>Swordman</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/b/be/MageATK.jpeg" alt="Mage" id="Mage" class="imgClaseRPG">
+      <p>Mage</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://static.wikia.nocookie.net/pro/images/7/78/Merchant.jpg" alt="Merchant" id="Merchant"
+        class="imgClaseRPG">
+      <p>Merchant</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/thumb/f/f9/AcolyteATK.jpeg/300px-AcolyteATK.jpeg" alt="Acolyte"
+        id="Acolyte" class="imgClaseRPG">
+      <p>Acolyte</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/thumb/a/a2/ThiefATK.gif/300px-ThiefATK.gif" alt="thief" id="Thief"
+        class="imgClaseRPG">
+      <p>Thief</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/thumb/2/2c/ArcherATK1.jpeg/300px-ArcherATK1.jpeg" alt="Archer" id="Archer"
+        class="imgClaseRPG">
+      <p>Archer</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/a/ad/TaekwonKids.jpg" alt="Taekwon kid" id="Taekwon-Kid"
+        class="imgClaseRPG">
+      <p>Taekwon Kid</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/7/76/Ninja.jpg" alt="Ninja" id="Ninja" class="imgClaseRPG">
+      <p>Ninja</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/thumb/8/82/Gunslinger.jpg/300px-Gunslinger.jpg" alt="Gunslinger"
+        id="Gunslinger" class="imgClaseRPG">
+      <p>Gunslinger</p>
+    </div>
+    <div class="RPG-class">
+      <img
+        src="https://lh7-us.googleusercontent.com/9mrLxDtqa1L9mvu_RuLXWhHaYnuc3dY1YMMUCVaKBs5TqGgyrbE2eApB1QwEroLGw8R_c_CqUKp2Ta48w97R422OwPUzA8KQK8EFlRiyTG5rHr1ywsmZ4_yCeDKIrK2oTAs7qPOxzcysfpUtsWhdpME"
+        alt="Super Novice" id="Super-Novice" class="imgClaseRPG superNovice">
+      <p>Super Novice</p>
+    </div>
+    <div class="RPG-class">
+      <img src="https://irowiki.org/w/images/5/50/Doram-Summoner.jpg" alt="Summoner" id="Summoner" class="imgClaseRPG">
+      <p>Summoner</p>
+    </div>
+  </main>
+
+  <div id="miModal">
+    <div id="contenidoModal">
+      <button class="botonNavegacion" id="botonCierreModal">&times;</button>
+      <div id="contenedorImgModal">
+        <button class="botonNavegacion" id="anterior">&larr;</button>
+        <img src="..." id="imgModal" alt="imgModal">
+        <button class="botonNavegacion" id="siguiente">&rarr;</button>
+      </div>
+      <span id="nombreEnModal"></span>
+    </div>
+  </div>
+</body>
+
+</html>

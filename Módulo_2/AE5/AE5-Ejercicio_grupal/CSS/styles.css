@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  min-height: 5dvh;
+  padding-block: 0.5em;
+  padding-inline: 1em;
+  color: white;
+  background-color: rgb(67, 67, 119);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-inline: 0.5em;
+  white-space: nowrap;
+}
+
+main {
+  max-width: 1024px;
+  min-height: 85dvh;
+  margin-inline: 1em;
+}
+
+.barra-búsqueda {
+  padding-block: 1em;
+}
+
+.formulario-búsqueda {
+  padding-block: 0.8em;
+}
+
+.barra-búsqueda input[type="search"] {
+  display: block;
+  width: 100%;
+  height: 2.5em;
+  border-radius: 3px;
+  border-width: thin;
+  margin-bottom: 1em;
+  padding-inline-start: 1em;
+}
+
+.barra-búsqueda input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding-block: 0.4em;
+  color: white;
+  background-color: rgb(92, 92, 146);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lista-libros {
+  max-height: 400px;
+  padding-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  overflow-y: scroll;
+  justify-content: center;
+}
+
+#contadorResultados {
+  display: none;
+}
+
+.tarjeta-libro {
+  border: solid gray thin;
+  min-height: 10em;
+  width: 25em;
+  border-radius: 5px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.5em;
+}
+
+.oculto {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  flex-basis: 0;
+}
+
+form {
+  margin-block: 1em;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  margin-block: 0.8em;
+  height: 2em;
+  padding-inline: 1em;
+}
+
+#botonRegistro {
+  padding-block: 0.4em;
+  color: white;
+  background-color: rgb(92, 92, 146);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  max-width: 1024px;
+  height: 10dvh;
+  margin-inline: 1em;
+  padding-bottom: 1em;
+}
+
+@media (max-width: 368px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.2em;
+  }
+
+  .navbar p,
+  .enlaces a {
+    margin-inline: 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  main,
+  footer {
+    margin-inline: auto;
+  }
+}
