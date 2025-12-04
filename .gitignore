@@ -4,6 +4,8 @@
 *.zip
 *.mp3
 *.docx
+*ppt
+*pptx
 node_modules
 /Módulo_2/AE2/
 /Módulo_2/AE3/AE3_ABPRO-Ejercicio grupal
