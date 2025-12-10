@@ -169,9 +169,13 @@ const refrescarSesion = async (req, res, next) => {
     }
 
     // Buscamos un usuario en la base de datos cuyo atributo "refresh_token" coincida con el token de la petición
+    const idRuta = Number(req.params.id);
     const usuarioValido = await Usuario.findOne({
       where: {
-        refresh_token: { [Op.eq]: refreshToken },
+        [Op.and]: [
+          { id: { [Op.eq]: idRuta } },
+          { refresh_token: { [Op.eq]: refreshToken } },
+        ],
       },
     });
 

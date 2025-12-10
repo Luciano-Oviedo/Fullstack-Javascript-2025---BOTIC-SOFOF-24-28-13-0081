@@ -92,7 +92,9 @@ const mostrarCatalogoPrivado = async (req, res, next) => {
     const libros = librosData.map((libro) => libro.toJSON());
 
     // Renderizamos los libros actualizados y ordenados alfabeticamente
-    return res.status(200).render("catalogo", { libros: libros });
+    return res
+      .status(200)
+      .render("catalogo", { libros: libros, usuarioId: req.user.id });
   } catch (error) {
     // Enviamos los errores capturados al middleware global de errores
     return next(error);
@@ -103,21 +105,23 @@ const mostrarCatalogoPrivado = async (req, res, next) => {
 const buscarLibros = async (req, res, next) => {
   try {
     // Obtenemos el input de búsqueda del usuario desde el query param de la petición
-    const inputUsuario = req.query.search;
-    // Validamos existencia del query param en la petición y que sea tipo string
-    if (!inputUsuario || typeof inputUsuario !== "string") {
-      throw new InternalFlowError(
-        "el usuario debe ingresar cadenas de texto como valor del query param para hacer una búsqueda"
-      );
+    const inputUsuario = req.query.query;
+
+    // Si el campo está vacío o no existe, renderizaramos todo el catálogo
+    if (!inputUsuario || inputUsuario.trim() === "") {
+      // Traer todos los libros ordenados
+      const librosData = await Libro.findAll({ order: [["titulo", "ASC"]] });
+      const libros = librosData.map((libro) => libro.toJSON());
+
+      return res.status(200).render("catalogo", {
+        libros,
+        usuarioId: req.user.id,
+      });
     }
-    // Validamos que no sea un valor vacío
-    const inputUsuarioNormalizado = inputUsuario.trim();
-    if (inputUsuarioNormalizado === "") {
-      throw new ValidationAppError("el campo de búsqueda está vacío");
-    }
+
     // Realizamos una consulta a la base de datos, para obtener todos los libros donde título o autor coincidan parcialmente con la búsqueda del usuario
+    const inputUsuarioNormalizado = inputUsuario.trim();
     const resultados = await Libro.findAndCountAll({
-      attributes: ["titulo", "autor"],
       where: {
         [Op.or]: [
           { titulo: { [Op.iLike]: `%${inputUsuarioNormalizado}%` } },
@@ -126,15 +130,20 @@ const buscarLibros = async (req, res, next) => {
       },
       order: [["titulo", "ASC"]],
     });
+
     // Si no hay resultados, renderizamos un mensaje informativo en la interfaz de usuario
     if (resultados.count === 0) {
       return res.status(404).render("catalogo", {
         mensaje: "No hay resultados para tu búsqueda",
+        usuarioId: req.user.id,
+        libros: [],
       });
     }
     // Renderizamos los resultados en la interfaz de usuario
     const libros = resultados.rows.map((libro) => libro.toJSON());
-    return res.status(200).render("catalogo", { libros: libros });
+    return res
+      .status(200)
+      .render("catalogo", { libros: libros, usuarioId: req.user.id });
   } catch (error) {
     // Enviamos los errores capturados al middleware global de errores
     return next(error);
@@ -206,9 +215,14 @@ const comprarLibros = async (req, res, next) => {
     }
     // Confirmamos la transacción
     await t.commit();
+    // Enviamos respuesta al cliente
     return res.status(200).json({
       mensaje:
         "Tu compra se ha procesado correctamente, en unos minutos recibirás un email con las instrucciones de pago",
+      stockActualizado: librosModificados.map((libro) => ({
+        id: libro.id,
+        cantidad_disponible: libro.cantidad_disponible,
+      })),
     });
   } catch (error) {
     // Si sucede algún error durante el proceso, revertimos toda la transacción

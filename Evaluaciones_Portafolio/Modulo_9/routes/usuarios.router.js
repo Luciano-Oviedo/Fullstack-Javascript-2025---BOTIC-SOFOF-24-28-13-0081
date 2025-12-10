@@ -18,6 +18,6 @@ router.post("/login", loginUsuario);
 router.get("/:id/libros", autenticarUsuario, mostrarCatalogoPrivado);
 router.get("/:id/libros/buscar", autenticarUsuario, buscarLibros);
 router.post("/:id/libros/compras", autenticarUsuario, comprarLibros);
-router.post("/:id/refresh", refrescarSesion);
+router.post("/:id/refrescar", refrescarSesion);
 
 export default router;

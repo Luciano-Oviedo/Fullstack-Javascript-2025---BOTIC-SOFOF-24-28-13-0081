@@ -36,9 +36,9 @@ export const errorHandler = (error, req, res, next) => {
   // Errores de autenticación
   if (error instanceof AuthError) {
     console.error("Error de autenticación:", error.message);
-    return res.status(error.status).json({
-      mensaje: error.message,
-    });
+    if (error instanceof AuthError) {
+      return res.status(401).render("error", { mensaje: error.message });
+    }
   }
 
   // Errores en el flujo de la petición (frontend no envió algún parámetro obligatorio)

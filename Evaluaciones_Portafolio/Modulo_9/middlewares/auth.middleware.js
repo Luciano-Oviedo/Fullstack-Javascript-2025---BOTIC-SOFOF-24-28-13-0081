@@ -17,18 +17,18 @@ export const autenticarUsuario = async (req, res, next) => {
       throw new AuthError("Token de acceso inválido");
     }
 
-    // Validamos que exista un usuario registrado con el id de la ruta
-    const usuarioExistente = await Usuario.findByPk(idRuta);
-    if (!usuarioExistente) {
-      throw new ValidationAppError("No existe un usuario asociado a este id");
-    }
-
     // Validamos que el token no esté expirado
     let payload;
     try {
       payload = jwt.verify(accessToken, LLAVE_SECRETA);
     } catch (error) {
       throw new AuthError("Token de acceso expirado");
+    }
+
+    // Validamos que exista un usuario registrado con el id de la ruta
+    const usuarioExistente = await Usuario.findByPk(idRuta);
+    if (!usuarioExistente) {
+      throw new AuthError("No existe un usuario asociado a este id");
     }
 
     // Validamos que el token corresponda al usuario
@@ -38,6 +38,9 @@ export const autenticarUsuario = async (req, res, next) => {
     ) {
       throw new AuthError("Usuario no autorizado para realizar esta operación");
     }
+
+    // Guardamos el id del usuario en el objeto req para usar en controladores de rutas protegidas
+    req.user = { id: usuarioExistente.id };
 
     // Pasamos a la siguiente función
     return next();
